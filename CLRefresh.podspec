@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 # 名称 使用的时候pod search [name]
 s.name         = "CLRefresh"
 # 代码库的版本
-s.version      = "0.0.1"
+s.version      = "0.0.2"
 # 简介
 s.summary      = "快速集成上拉加载下拉刷新"
 # 主页
