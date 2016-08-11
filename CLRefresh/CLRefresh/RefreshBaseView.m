@@ -24,8 +24,8 @@
 - (instancetype)init
 {
     if (self = [super init]) {
-        [self setStateText];
-        [self addRefreshContentView];
+         [self setStateText];
+         [self addRefreshContentView];
         self.refreshState = RefreshStateNormal;
     }
     return self;
@@ -91,7 +91,7 @@
 
 - (void)startRefresh
 {
-    
+    self.refreshState = RefreshStateLoading;
 }
 
 - (void)endRefresh

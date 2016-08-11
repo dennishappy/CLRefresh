@@ -15,7 +15,8 @@
 +(instancetype)headerWithRefreshHandler:(RefreshedHandler)refreshHandler
 {
     RefreshHeaderView *header = [[RefreshHeaderView alloc] init];
-    header.refreshHandler = refreshHandler;
+    header.backgroundColor = [UIColor lightGrayColor];
+     header.refreshHandler = refreshHandler;
     return header;
 }
 
@@ -44,7 +45,7 @@
     _timeLabel = [[UILabel alloc] init];
     _timeLabel.frame = CGRectMake(0, 35, screenWidth, 20);
     _timeLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:12];
-    _timeLabel.textColor = [UIColor colorWithRed:150/255.0 green:150/255.0 blue:150/255.0 alpha:1.0];
+    _timeLabel.textColor = FCXREFRESHTEXTCOLOR;
     _timeLabel.backgroundColor = [UIColor clearColor];
     _timeLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:_timeLabel];
@@ -56,7 +57,8 @@
     
     //转圈动画
     
-    _headerCircle = [[CLHeaderCircleView alloc] initWithFrame:CGRectMake(screenWidth/2.0 - 100, (LoadingOffsetHeight - 40)/2.0 + 5, 30, 30)];
+    _headerCircle = [[CLHeaderCircleView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    _headerCircle.center = CGPointMake(self.frame.size.width /2 - 100, LoadingOffsetHeight/2);
     _headerCircle.delegate = self;
     [self addSubview:_headerCircle];
     
@@ -191,7 +193,7 @@
     CABasicAnimation* rotationAnimation;
     rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 ];
-    rotationAnimation.duration = 0.8;
+    rotationAnimation.duration = 0.4;
     rotationAnimation.cumulative = YES;
     rotationAnimation.repeatCount = MAXFLOAT;
     

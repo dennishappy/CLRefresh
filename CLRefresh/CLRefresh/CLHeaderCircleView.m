@@ -18,7 +18,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        [self setBackgroundColor:[UIColor whiteColor]];
+        [self setBackgroundColor:[UIColor clearColor]];
         radius = 10;
         lineLength = 70;
         _isAnimation = NO;
@@ -40,7 +40,7 @@
     CGContextSetAllowsAntialiasing(ctx, YES);
     
     CGContextBeginPath(ctx);
-    CGContextSetStrokeColorWithColor(ctx, [UIColor redColor].CGColor);
+    CGContextSetStrokeColorWithColor(ctx, [UIColor whiteColor].CGColor);
     
     //画笔宽度
     CGContextSetLineWidth(ctx, 1);

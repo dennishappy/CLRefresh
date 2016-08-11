@@ -25,9 +25,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.translucent = NO;
     
-    
-    table = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, [UIScreen mainScreen].bounds.size.height - 64) style:UITableViewStylePlain];
+    table = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 64) style:UITableViewStylePlain];
     table.delegate = self;
     table.dataSource = self;
     table.tableFooterView = [UIView new];
@@ -45,8 +45,7 @@
     
     footerView = [table addFooterWithRefreshHandler:^(RefreshBaseView *refreshView) {
         [weakself performSelector:@selector(handleRefresh) withObject:nil afterDelay:2.0];
-        
-    }];
+     }];
     
     
 }
@@ -54,7 +53,6 @@
 
 - (void)handleRefresh
 {
-    
     [headerView endRefresh];
     [footerView endRefresh];
 }
@@ -69,9 +67,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL"];
-    if (indexPath.row == 0) {
-        [cell setBackgroundColor:[UIColor grayColor]];
-    }
     cell.textLabel.text = [NSString stringWithFormat:@"%ld--%ld",(long)indexPath.section,(long)indexPath.row];
     return cell;
 }

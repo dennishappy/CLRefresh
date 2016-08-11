@@ -14,6 +14,7 @@
 + (instancetype)footerWithRefreshHandler:(RefreshedHandler)refreshHandler {
     
     RefreshFooterView *footer = [[RefreshFooterView alloc] init];
+    footer.backgroundColor = [UIColor lightGrayColor];
     footer.refreshHandler = refreshHandler;
     return footer;
 }
@@ -143,8 +144,7 @@
                 }
                 _arrowImage.hidden = NO;
                 
-               // [_activityView stopAnimating];
-                [self resignNormal];
+                 [self resignNormal];
 
                 
                 [UIView animateWithDuration:0.2 animations:^{

@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger,RefreshViewType) {
 static const CGFloat LoadingOffsetHeight = 60;
 
 /// 文本颜色
-#define FCXREFRESHTEXTCOLOR [UIColor colorWithRed:150/255.0 green:150/255.0 blue:150/255.0 alpha:1.0]
+#define FCXREFRESHTEXTCOLOR [UIColor colorWithRed:255.0/255.0 green:255.0 /255.0 blue:255.0/255.0 alpha:1.0]
 
 
 @class RefreshBaseView;
