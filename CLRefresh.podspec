@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
-<<<<<<< HEAD
- s.name         = "CLRefresh"
- s.version      = "1.1"
+ 
+  s.name         = "CLRefresh"
+ s.version      = "1.0"
  s.summary      = "快速集成上拉加载下拉刷新"
  
 # 主页
