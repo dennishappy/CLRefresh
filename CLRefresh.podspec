@@ -1,7 +1,16 @@
 Pod::Spec.new do |s|
+<<<<<<< HEAD
  s.name         = "CLRefresh"
  s.version      = "1.1"
  s.summary      = "快速集成上拉加载下拉刷新"
+=======
+# 名称 使用的时候pod search [name]
+s.name         = "CLRefresh"
+# 代码库的版本
+s.version      = "0.0.2"
+# 简介
+s.summary      = "快速集成上拉加载下拉刷新"
+>>>>>>> 44cf1009b5f379b8cfff4fe6878ec7c71ce4343e
 # 主页
 s.homepage     = "https://github.com/ChenLiniOS/CLRefresh"
  s.license      = "MIT"
